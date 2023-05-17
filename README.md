@@ -1,6 +1,6 @@
 # FRONTEND MENTOR CHALLENGES
 
-# _A collection of completed challenges from Frontend Mentor _
+## A collection of completed challenges from Frontend Mentor
 
 In this repository you can see my solutions for the challenges.
 All solutions are hosted on Netlify for live previews, just click the links. :)
@@ -14,4 +14,4 @@ All solutions are hosted on Netlify for live previews, just click the links. :)
 
 ## In progress
 
-> Time tracking dashboard
+- Time tracking dashboard
