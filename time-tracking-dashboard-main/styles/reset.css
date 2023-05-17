@@ -3,7 +3,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-size: 62.5%;
 }
 
 /* Remove default margin */

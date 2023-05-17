@@ -26,8 +26,8 @@ function renderTimeframe(timeframe) {
 
     const timeframeStrings = {
       daily: "Yesterday",
-      weekly: "Last week",
-      monthly: "Last month",
+      weekly: "Last Week",
+      monthly: "Last Month",
     };
 
     const timeframeString = timeframeStrings[timeframe];
@@ -36,18 +36,14 @@ function renderTimeframe(timeframe) {
     card.insertAdjacentHTML(
       "beforeend",
       `
-      <div class="card__container>
-        <div class="card__title-container flex">
             <h3 class="card__title">${title}</h3>
             <img class="icon-ellipsis" src="./images/icon-ellipsis.svg" />  
-        </div>
             <p class="card__timeframe-current">${current}${
         current == 1 ? "hr" : "hrs"
       }</p>
             <p class="card__timeframe-previous">${timeframeString} - ${previous}${
         previous == 1 ? "hr" : "hrs"
       }</p>
-      </div>
           `
     );
   });
