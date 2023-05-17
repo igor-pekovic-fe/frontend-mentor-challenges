@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Manrope", "sans-serif";
+  font-size: 62.5%;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  background-color: hsl(218, 23%, 16%);
+}
+
+.advice-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 34rem;
+  height: 100%;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 1rem;
+  padding-inline: 4rem;
+}
+.advice-card__id {
+  font-size: 1.1rem;
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+.advice-card__advice {
+  text-align: center;
+  font-size: 2.4rem;
+  color: hsl(193, 38%, 86%);
+  padding-bottom: 2.8rem;
+}
+.advice-card__divider {
+  padding-bottom: 6rem;
+}
+.advice-card__dice {
+  position: absolute;
+  bottom: -28px;
+  place-content: center;
+  width: 6rem;
+  height: 6rem;
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 0.1s ease-in-out;
+}
+.advice-card__dice:hover {
+  box-shadow: 0px 0px 30px 6px hsl(150, 100%, 66%);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  color: #fff;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+  .advice-card {
+    width: 36rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .advice-card {
+    width: 38rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .advice-card {
+    width: 40rem;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .advice-card {
+    width: 44rem;
+  }
+}/*# sourceMappingURL=main.css.map */
