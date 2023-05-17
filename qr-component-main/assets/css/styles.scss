@@ -1,0 +1,88 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Outfit:wght@400;700&display=swap");
+
+// Colors
+$bg-color: hsl(212, 45%, 89%);
+$container-color: hsl(0, 0%, 100%);
+$title-color: hsl(218, 44%, 22%);
+$paragraph-color: hsl(220, 15%, 55%);
+
+// Reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Outfit", "sans-serif";
+  font-size: 62.5%;
+}
+
+// Helper classes
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+// Styling
+.container {
+  place-content: center;
+  height: 100vh;
+  background-color: $bg-color;
+}
+
+.card-container {
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31rem;
+  height: 100%;
+  background-color: $container-color;
+  border-radius: 15px;
+  padding: 1.5rem;
+
+  img {
+    width: 28rem;
+    height: 28rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: 2rem;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: $title-color;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.5rem;
+    color: $paragraph-color;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: $title-color;
+
+  a {
+    color: $paragraph-color;
+  }
+}

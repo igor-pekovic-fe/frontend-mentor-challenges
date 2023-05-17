@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Public+Sans:wght@300;400&family=Red+Hat+Display:wght@500;700;900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html {
+  font-family: "Red Hat Display", "sans serif";
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  place-content: center;
+  height: 100vh;
+  background-color: hsl(225deg, 100%, 94%);
+  background-image: url(/assets/images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: cover;
+}
+
+.card-container {
+  width: 33rem;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 30px 40px -40px hsl(224deg, 23%, 55%);
+}
+.card-container img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 1.6rem;
+}
+.card-container__content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.2rem;
+}
+.card-container__content-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: hsl(223deg, 47%, 23%);
+  margin-bottom: 0.5rem;
+}
+.card-container__content-description {
+  text-align: center;
+  font-size: 1.6rem;
+  color: hsl(224deg, 23%, 55%);
+  line-height: 1.5;
+  padding: 1rem;
+  margin-bottom: 1.8rem;
+}
+.card-container__content-plan {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2.8rem;
+}
+.card-container__content-plan img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+  margin-right: 2rem;
+}
+.card-container__content-plan .plan-info {
+  justify-content: center;
+  font-size: 1.6rem;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.card-container__content-plan .plan-info__type {
+  font-size: 1.4rem;
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+.card-container__content-plan .plan-info__price {
+  font-size: 1.4rem;
+  color: hsl(224deg, 23%, 55%);
+  font-weight: 700;
+}
+.card-container__content-plan a {
+  color: hsl(245deg, 75%, 52%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: color 0.2s ease-in-out, -webkit-text-decoration 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out, -webkit-text-decoration 0.2s ease-in-out;
+}
+.card-container__content-plan a:hover {
+  color: hsla(245deg, 75%, 52%, 0.7);
+  text-decoration: none;
+}
+.card-container__content button {
+  width: 100%;
+  background-color: hsl(245deg, 75%, 52%);
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding-block: 1.5rem;
+  margin-bottom: 2.4rem;
+  box-shadow: 0px 30px 30px -21px hsl(245deg, 75%, 52%);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.card-container__content button:hover {
+  background-color: hsla(245deg, 75%, 52%, 0.7);
+}
+.card-container__content > a {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: hsl(224deg, 23%, 55%);
+  text-decoration: none;
+  margin-bottom: 1.4rem;
+  transition: color 0.2s ease-in-out;
+}
+.card-container__content > a:hover {
+  cursor: pointer;
+  color: hsl(223deg, 47%, 23%);
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: hsl(223deg, 47%, 23%);
+}
+.attribution a {
+  font-size: 1.4rem;
+  color: hsl(245deg, 75%, 52%);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.attribution a:hover {
+  color: hsla(245deg, 75%, 52%, 0.7);
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  .card-container {
+    width: 38rem;
+  }
+  .card-container img {
+    margin-bottom: 0.6rem;
+  }
+  .card-container__content {
+    padding: 3.4rem;
+  }
+  .card-container__content-title {
+    font-size: 2.6rem;
+    margin-bottom: 0.2rem;
+  }
+  .card-container__content-description {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.4;
+    padding: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,219 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Public+Sans:wght@300;400&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+// Colors
+$white: #fff;
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+$veryPaleBlue: hsl(225, 100%, 98%);
+$desaturatedBlue: hsl(224, 23%, 55%);
+$darkBlue: hsl(223, 47%, 23%);
+$hover-overlay-color: hsla(245, 75%, 52%, 0.7);
+
+// Typography
+$font: "Red Hat Display", "sans serif";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+html {
+  font-family: $font;
+}
+
+// Helper classes
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+// Styles
+.container {
+  place-content: center;
+  height: 100vh;
+  background-color: $paleBlue;
+  background-image: url(/assets/images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: cover;
+}
+
+.card-container {
+  width: 33rem;
+  background-color: $white;
+  border-radius: 20px;
+  box-shadow: 0px 30px 40px -40px $desaturatedBlue;
+
+  img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 1.6rem;
+  }
+
+  &__content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.2rem;
+
+    &-title {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: $darkBlue;
+      margin-bottom: 0.5rem;
+    }
+
+    &-description {
+      text-align: center;
+      font-size: 1.6rem;
+      color: $desaturatedBlue;
+      line-height: 1.5;
+      padding: 1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    &-plan {
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      background-color: $veryPaleBlue;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2.8rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 0;
+        margin-right: 2rem;
+      }
+
+      .plan-info {
+        justify-content: center;
+        font-size: 1.6rem;
+        flex-direction: column;
+        white-space: nowrap;
+
+        &__type {
+          font-size: 1.4rem;
+          color: $darkBlue;
+          font-weight: 900;
+          margin-bottom: 0.4rem;
+        }
+
+        &__price {
+          font-size: 1.4rem;
+          color: $desaturatedBlue;
+          font-weight: 700;
+        }
+      }
+
+      a {
+        color: $brightBlue;
+        font-size: 1.2rem;
+        font-weight: 700;
+        transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out;
+
+        &:hover {
+          color: $hover-overlay-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+      background-color: $brightBlue;
+      font-family: inherit;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: $white;
+      border: none;
+      border-radius: 10px;
+      padding-block: 1.5rem;
+      margin-bottom: 2.4rem;
+      box-shadow: 0px 30px 30px -21px $brightBlue;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: $hover-overlay-color;
+      }
+    }
+
+    > a {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: $desaturatedBlue;
+      text-decoration: none;
+      margin-bottom: 1.4rem;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        color: $darkBlue;
+      }
+    }
+  }
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: $darkBlue;
+
+  a {
+    font-size: 1.4rem;
+    color: $brightBlue;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $hover-overlay-color;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  .card-container {
+    width: 38rem;
+
+    img {
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  .card-container__content {
+    padding: 3.4rem;
+
+    &-title {
+      font-size: 2.6rem;
+      margin-bottom: 0.2rem;
+    }
+
+    &-description {
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.4;
+      padding: 1.8rem;
+      margin-bottom: 0.4rem;
+    }
+  }
+}
