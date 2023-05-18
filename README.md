@@ -8,9 +8,9 @@ All solutions are hosted on Netlify for live previews, just click the links. :)
 ## Finished
 
 - [QR rating component](https://qr-component-igor-pekovic.netlify.app/)
-- [Advice generator](https://app.netlify.com/sites/advice-generator-app-igor-pekovic/overview)
+- [Advice generator](https://advice-generator-app-igor-pekovic.netlify.app/)
 - [Interactive rating component](https://rating-component-igor-pekovic.netlify.app/)
-- [Order summary page](https://app.netlify.com/sites/summary-component-igor-pekovic/overview)
+- [Order summary page](https://summary-component-igor-pekovic.netlify.app/)
 
 ## In progress
 
