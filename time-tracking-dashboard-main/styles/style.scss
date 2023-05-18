@@ -5,7 +5,7 @@
 // General styling
 body {
   display: grid;
-  // place-items: center;
+  place-content: center;
   font-family: "Rubik", sans-serif;
   background-color: variables.$bg-color;
 }
@@ -14,25 +14,20 @@ body {
 .main {
   max-width: 24rem;
   padding: 5em 1em;
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6em;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
     .dashboard {
       width: 15rem;
-    }
-
-    &__container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
     }
   }
 }

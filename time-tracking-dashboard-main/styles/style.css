@@ -10,6 +10,10 @@
   border-radius: 14px;
   padding: 1.2em 1.4em;
 }
+.card__content:is(:hover, :active) {
+  cursor: pointer;
+  filter: brightness(150%);
+}
 .card__title {
   margin-right: auto;
   color: hsl(0, 0%, 100%);
@@ -129,9 +133,11 @@
     display: grid;
     grid-template-columns: repeat(2, 6rem);
     grid-template-rows: repeat(3, 3rem);
+    height: 12rem;
   }
   .card__title {
     grid-area: 1/1/2/2;
+    font-size: 1em;
     margin-bottom: 1em;
   }
   .card img {
@@ -207,6 +213,7 @@
     gap: 2.6rem;
   }
   .dashboard__username {
+    width: 10ch;
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
   }
@@ -214,10 +221,12 @@
     flex-direction: column;
     font-size: 1rem;
     gap: 1em;
+    margin-top: 0.5em;
   }
 }
 body {
   display: grid;
+  place-content: center;
   font-family: "Rubik", sans-serif;
   background-color: hsl(226, 43%, 10%);
 }
@@ -225,8 +234,6 @@ body {
 .main {
   max-width: 24rem;
   padding: 5em 1em;
-}
-.main__container {
   display: flex;
   flex-direction: column;
   gap: 1.6em;
@@ -234,12 +241,12 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .main .dashboard {
-    width: 15rem;
-  }
-  .main__container {
+  .main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+  .main .dashboard {
+    width: 15rem;
   }
 }/*# sourceMappingURL=style.css.map */
