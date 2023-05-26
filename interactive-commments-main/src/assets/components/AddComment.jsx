@@ -5,19 +5,22 @@ export default function AddComment({ addComment }) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    addComment({
-      id: Date.now(),
-      content: comment,
-      createdAt: "Now",
-      replies: [],
-      score: 1,
-      user: {
-        username: "Igor",
-        image: {
-          png: "./images/avatars/image-juliusomo.png",
+
+    if (comment) {
+      addComment({
+        id: Date.now(),
+        content: comment,
+        createdAt: "Now",
+        replies: [],
+        score: 1,
+        user: {
+          username: "Igor",
+          image: {
+            png: "./images/avatars/image-juliusomo.png",
+          },
         },
-      },
-    });
+      });
+    }
     setComment("");
   };
 

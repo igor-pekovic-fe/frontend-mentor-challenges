@@ -1,24 +1,33 @@
 import { useState } from "react";
 
-export default function AddReply({ addReply }) {
+export default function AddReply({ addReply, id, comment, stopReplying }) {
   const [reply, setReply] = useState("");
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    addReply({
-      id: Date.now(),
-      content: comment,
-      createdAt: "Now",
-      replies: [],
-      score: 1,
-      replyingTo: "Test",
-      user: {
-        username: "Igor",
-        image: {
-          png: "./images/avatars/image-juliusomo.png",
+    const time = new Date().toString().split(" ");
+
+    if (reply) {
+      addReply(
+        {
+          id: Date.now(),
+          content: reply,
+          createdAt: `${time[1]}  ${time[2]}`,
+          replies: [],
+          replyingTo: id == comment.id && `${comment.user.username}`,
+          score: 1,
+          user: {
+            username: "Igor",
+            image: {
+              png: "./images/avatars/image-juliusomo.png",
+            },
+          },
         },
-      },
-    });
+        id
+      );
+    }
     setReply("");
+    stopReplying();
   };
 
   return (
@@ -27,11 +36,11 @@ export default function AddReply({ addReply }) {
         <textarea
           className="w-full h-24 text-grayish-blue font-medium text-sm outline outline-1 outline-light-gray rounded-lg resize-none mb-4 px-5 py-2"
           type="textarea"
-          id="comment"
+          id="reply"
           value={reply}
           onInput={(e) => setReply(e.target.value)}
           autoFocus
-          placeholder="Add a reply..."
+          placeholder="Add reply..."
           name=""
           cols="30"
           rows="10"
@@ -46,7 +55,7 @@ export default function AddReply({ addReply }) {
         <button
           className="text-white bg-moderate-blue font-bold px-7 py-3 rounded-lg"
           type="submit"
-          aria-label="add comment"
+          aria-label="add reply"
         >
           SEND
         </button>
