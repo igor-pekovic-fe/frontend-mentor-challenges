@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-export default function AddReply({ addReply, id, comment, stopReplying }) {
+export default function AddReply({
+  addReply,
+  id,
+  comment,
+  stopReplying,
+  currentUser,
+}) {
   const [reply, setReply] = useState("");
 
   const handleFormSubmit = (e) => {
@@ -17,9 +23,9 @@ export default function AddReply({ addReply, id, comment, stopReplying }) {
           replyingTo: id == comment.id && `${comment.user.username}`,
           score: 1,
           user: {
-            username: "Igor",
+            username: currentUser.username,
             image: {
-              png: "./images/avatars/image-juliusomo.png",
+              png: currentUser.image.png,
             },
           },
         },
@@ -53,11 +59,11 @@ export default function AddReply({ addReply, id, comment, stopReplying }) {
           alt=""
         />
         <button
-          className="text-white bg-moderate-blue font-bold px-7 py-3 rounded-lg"
+          className="text-white bg-moderate-blue px-7 py-3 rounded-lg"
           type="submit"
           aria-label="add reply"
         >
-          SEND
+          REPLY
         </button>
       </div>
     </form>

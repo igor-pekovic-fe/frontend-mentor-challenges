@@ -1,22 +1,23 @@
 import { useState } from "react";
 
-export default function AddComment({ addComment }) {
+export default function AddComment({ addComment, currentUser }) {
   const [comment, setComment] = useState("");
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    const time = new Date().toString().split(" ");
 
     if (comment) {
       addComment({
         id: Date.now(),
         content: comment,
-        createdAt: "Now",
+        createdAt: `${time[1]}  ${time[2]}`,
         replies: [],
         score: 1,
         user: {
-          username: "Igor",
+          username: currentUser.username,
           image: {
-            png: "./images/avatars/image-juliusomo.png",
+            png: currentUser.image.png,
           },
         },
       });
@@ -47,7 +48,7 @@ export default function AddComment({ addComment }) {
           alt=""
         />
         <button
-          className="text-white bg-moderate-blue font-bold px-7 py-3 rounded-lg"
+          className="text-white bg-moderate-blue px-7 py-3 rounded-lg"
           type="submit"
           aria-label="add comment"
         >
