@@ -1,6 +1,6 @@
 export default function Filter({ selectedRegion, handleSelect }) {
   return (
-    <div className="mb-4">
+    <div className="mb-4 px-4">
       <select
         className="px-6 py-4 flex text-sm dark:text-lightmode-bg  font-semibold rounded-lg dark:bg-dark-blue"
         value={selectedRegion}

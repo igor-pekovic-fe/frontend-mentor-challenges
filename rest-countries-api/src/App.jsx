@@ -12,6 +12,7 @@ function App() {
   const [selectedRegion, setSelectedRegion] = useState("");
   const [isDark, setIsDark] = useState(false);
 
+  console.log(data);
   useEffect(() => {
     fetch(
       `https://restcountries.com/v3.1/${
@@ -54,14 +55,14 @@ function App() {
     setIsDark((prevState) => !prevState);
   };
 
-  const cardsArr = data.slice(0, 8).map((country, index) => {
+  const cardsArr = data.map((country, index) => {
     return <Card key={index} country={country} />;
   });
 
   const filteredCardsArr = useMemo(() => {
-    return filteredData
-      .slice(0, 8)
-      .map((country, index) => <Card key={index} country={country} />);
+    return filteredData.map((country, index) => (
+      <Card key={index} country={country} />
+    ));
   }, [filteredData]);
 
   return (
@@ -73,7 +74,13 @@ function App() {
         handleChange={handleChange}
       />
       <Filter handleSelect={handleSelect} selectedRegion={selectedRegion} />
-      {selectedRegion ? filteredCardsArr : cardsArr}
+      {selectedRegion ? (
+        <div>{filteredCardsArr}</div>
+      ) : (
+        <div className="lg:grid lg:grid-rows-2 lg:grid-cols-4 lg:gap-2">
+          {cardsArr}
+        </div>
+      )}
     </div>
   );
 }

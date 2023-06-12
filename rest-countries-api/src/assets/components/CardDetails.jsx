@@ -1,8 +1,13 @@
-export default function CardDetails({ country }) {
+export default function CardDetails({ country, handleClick }) {
   return (
     <div className="shadow rounded mb-8">
-      <img src={country.flags.png} alt="" />
-      <div className="px-6 py-8">
+      <img
+        onClick={() => handleClick()}
+        className="rounded w-full h-36"
+        src={country.flags.png}
+        alt=""
+      />
+      <div className="px-6 py-8 dark:bg-dark-blue dark:text-lightmode-bg">
         <h1 className="text-lg my-4 font-bold">{country.name.common}</h1>
         <p className="text-sm">
           <span className="font-semibold">Official Name:</span>{" "}
@@ -10,7 +15,7 @@ export default function CardDetails({ country }) {
         </p>
         <p className="text-sm">
           <span className="font-semibold">Population:</span>{" "}
-          {country.population}
+          {country.population.toLocaleString("en-US")}
         </p>
         <p className="text-sm">
           <span className="font-semibold">Region:</span> {country.region}
@@ -35,11 +40,11 @@ export default function CardDetails({ country }) {
           {Object.values(country.languages)[0]}
         </p>
         <br />
-        <p>
+        <div className="flex gap-2">
           {country.borders
             ? country.borders.map((country) => <p>{country}</p>)
             : ""}
-        </p>
+        </div>
       </div>
     </div>
   );
