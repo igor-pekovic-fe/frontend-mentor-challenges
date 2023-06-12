@@ -15,4 +15,5 @@ All solutions are hosted on Netlify for live previews, just click the links. :)
 ## In progress
 
 - [Time tracking dashboard](https://time-tracking-dashboard-igor-pekovic.netlify.app/) -> Improvements needed
-- Interactive comments section
+- Interactive comments section -> Functionality and mobile design done. Tablet and desktop design left to do
+- REST Countries API with color theme switcher -> Functionality mostly done
