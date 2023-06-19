@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="#"><img src="./assets/img/logo.svg" alt="logo" /></a>
+          <button
+            class="mobile-nav-toggle"
+            aria-controls="header__nav"
+            aria-expanded="false"
+          >
+            <span class="visually-hidden">Menu</span>
+          </button>
+          <nav class="header__nav" id="header__nav">
+            <ul aria-label="navigation" role="list" class="header__nav__list">
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Community</a></li>
+            </ul>
+          </nav>
+          <button class="btn display-sm-none display-md-inline-flex">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="hero container">
+      <img
+        class="hero__image"
+        src="./assets/img/illustration-intro.svg"
+        alt=""
+      />
+      <h1 class="hero__title">
+        Bring everyone together to build better products.
+      </h1>
+      <p class="hero__subtitle">
+        Manage makes it simple for software teams to plan day-to-day tasks while
+        keeping the larger team goals in view.
+      </p>
+      <button class="btn">Get Started</button>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>

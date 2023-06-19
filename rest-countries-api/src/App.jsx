@@ -12,7 +12,6 @@ function App() {
   const [selectedRegion, setSelectedRegion] = useState("");
   const [isDark, setIsDark] = useState(false);
 
-  console.log(data);
   useEffect(() => {
     fetch(
       `https://restcountries.com/v3.1/${
